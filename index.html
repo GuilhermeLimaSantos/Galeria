@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
     <title>Galeria de Imagens</title>
 </head>
 <body>
@@ -12,7 +11,7 @@
 
   <div>
     <label for="imageLink"></label>
-    <input type="text" id="imageLink" placeholder="Link da Imagem">
+    <input type="text" id="imageLink" placeholder="Link da Imagem" oninput="exibirLinkPreview()">
   </div>
   
   <div>
@@ -26,5 +25,6 @@
   
   <div id="galeria"></div>
   
+  <script src="script.js"></script>
 </body>
 </html>
