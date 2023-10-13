@@ -4,10 +4,9 @@ function adicionarImagem() {
     const galeriaDiv = document.getElementById('galeria');
     const imagemPreviewDiv = document.getElementById('imagemPreview');
 
-    imagemPreviewDiv.innerHTML = '';
-
     if (linkInput.value !== '') {
         const imagemLink = linkInput.value;
+        exibirImagem(imagemLink, imagemPreviewDiv);
         exibirImagemNaGaleria(imagemLink, galeriaDiv);
         linkInput.value = '';
     } else if (fileInput.files.length > 0) {
@@ -18,7 +17,10 @@ function adicionarImagem() {
         fileInput.value = '';
     } else {
         alert('Por favor, forneça um link ou escolha um arquivo de imagem.');
+        return;
     }
+
+    imagemPreviewDiv.innerHTML = '';
 }
 
 function exibirImagem(imagemURL, container) {
@@ -49,5 +51,17 @@ function exibirPreview(input) {
         const imagemFile = input.files[0];
         const imagemURL = URL.createObjectURL(imagemFile);
         exibirImagem(imagemURL, imagemPreviewDiv);
+    }
+}
+
+function exibirLinkPreview() {
+    const linkInput = document.getElementById('imageLink');
+    const imagemPreviewDiv = document.getElementById('imagemPreview');
+
+    imagemPreviewDiv.innerHTML = '';
+
+    if (linkInput.value !== '') {
+        const imagemLink = linkInput.value;
+        exibirImagem(imagemLink, imagemPreviewDiv);
     }
 }
