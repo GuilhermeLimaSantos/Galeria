@@ -1,32 +1,53 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    margin: 0;
+    padding: 20px;
 }
 
-.link {
-  padding: 5px;
-  color: black;
-  outline: none;
-  font-size: 15px;
-  width: 100%;
+h1 {
+    text-align: center;
 }
 
-.box {
-  border: 1px solid black;
-  padding: 10px;
-  width: 40%;
-  height: 300px;
+label {
+    display: block;
+    margin-bottom: 5px;
 }
 
-.botao {
-  padding: 10px;
-  border: none;
-  background-color: aqua;
-  border-radius: 10px;
-  cursor: pointer;
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: aqua;
+    width: 150px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: rgb(129, 255, 255);
+}
+
+#imagemPreview img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+#imagemBox img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+#galeria img {
+    max-width: 100px;
+    height: auto;
+    margin: 5px;
 }
