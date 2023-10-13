@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Galeria de Imagens</title>
 </head>
 <body>
-    <h1>Galeria de Imagens</h1>
+  <h1>Galeria de Imagens</h1>
 
-    <div>
-      <label for="imageLink"></label>
-      <input type="text" id="imageLink" placeholder="Link da Imagem">
-    </div>
-
-    <div>
-      <label for="imageFile">Enviar Imagem do Computador:</label>
-      <input type="file" id="imageFile" accept="image/*">
-    </div>
-    
-    <div id="imagemPreview"></div>
-
-    <button onclick="adicionarImagem()">Enviar</button>
-    <div id="galeria"></div>
-    <div id="imagemBox"></div>
+  <div>
+    <label for="imageLink"></label>
+    <input type="text" id="imageLink" placeholder="Link da Imagem">
+  </div>
+  
+  <div>
+    <label for="imageFile"></label>
+    <input type="file" id="imageFile" accept="image/*" onchange="exibirPreview(this)">
+  </div>
+  
+  <div id="imagemPreview"></div>
+  
+  <button onclick="adicionarImagem()">Enviar</button>
+  
+  <div id="galeria"></div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
