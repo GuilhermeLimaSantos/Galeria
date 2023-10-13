@@ -4,13 +4,27 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Galeria</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+  <title>Document</title>
 </head>
 <body>
-  <input class="link" placeholder="Inserir Link">
-  <div class="box"></div>
-  <input class="file">
-  <button class="botao">Enviar</button>
+    <h1>Galeria de Imagens</h1>
+
+    <div>
+      <label for="imageLink"></label>
+      <input type="text" id="imageLink" placeholder="Link da Imagem">
+    </div>
+
+    <div>
+      <label for="imageFile">Enviar Imagem do Computador:</label>
+      <input type="file" id="imageFile" accept="image/*">
+    </div>
+    
+    <div id="imagemPreview"></div>
+
+    <button onclick="adicionarImagem()">Enviar</button>
+    <div id="galeria"></div>
+    <div id="imagemBox"></div>
 </body>
 </html>
